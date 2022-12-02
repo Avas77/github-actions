@@ -1,0 +1,14 @@
+name: Testing Github Actions
+on:
+  pull_request:
+    branches: [main]
+jobs:
+  check-yarn-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - run: npm install -g yarn
+      - run: yarn -v
