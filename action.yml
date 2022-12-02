@@ -1,0 +1,13 @@
+name: "Hello World"
+description: "Greet Someone"
+inputs: 
+  first-name:
+    description: "First name"
+    required: true
+    default: "Rame"
+outputs:
+  time:
+    description: 'The time we greeted'
+runs: 
+  using: 'node16'
+  main: 'index.js'
